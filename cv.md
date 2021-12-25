@@ -3,6 +3,7 @@
 * Location: Moscow, Russia
 * Phone: +7(925)801-98-10
 * E-mail: sstepanova.nv@gmail.com
+
 ****
 ## About me
  I've been working as IT project manager for the last 10 years. Now I want to gain new knowledge and experience in front-end development. And that's why I'm studying in RSSchool.
@@ -12,6 +13,7 @@
 * HTML
 * CSS (Bootstrap)
 * Confluence/Jira
+
 ****
 ## Code Example
 ```
@@ -34,6 +36,7 @@ function evenNumbers (array) {
   * Frontend and Web-design
 * Russian State University for Innovation Technologies and Business, 2009
   * Innovation technolodgies
+  
 ****
 
 ## Languages

@@ -1,3 +1,197 @@
-div {
+/*div {
     border: 1px red solid;
+}*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url("assets/fonts/Montserrat-ExtraLight.ttf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url("assets/fonts/Montserrat-Light.ttf");
+    font-weight: 300;
+  }
+@font-face {
+    font-family: 'Montserrat';
+    src: url("assets/fonts/Montserrat-Regular.ttf");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url("assets/fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+  }
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color: #652572;
+    --second-color: #a767b4;
+    --pink-color :#f5cdcc;
+    --font-color: #030303;
+    --font-second-color: #ffffff;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--font-color);
+}
+html {
+    scroll-behavior: smooth;
+  }
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header-container {
+    width: 100%;
+    background: rgb(101,37,114);
+    background: linear-gradient(304deg, 
+    rgba(101,37,114,1) 7%, 
+    rgba(121,73,131,1) 42%, 
+    rgba(167,103,180,1) 70%, 
+    rgba(245,205,204,1) 100%);
+}
+.photo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--font-second-color);
+}
+.round-photo {
+    border-radius: 150px;
+}
+.header-name {
+    text-align: center;
+    font-size: 25px;
+}
+.header-name span {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
+}
+.nav-link {
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--font-second-color);
+    transition: 0.5s;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section {
+    width: 45%;
+    margin-top: 50px;
+  }
+.section-name {
+    width: 140px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px;
+    color: var(--font-second-color);
+    background-color: var(--main-color);
+}
+.section-content {
+    position: relative;
+    padding: 22px;
+    border-left: 2px var(--main-color) solid;
+}
+.section-content li {
+    list-style: none;
+}   
+.section-content li::before {
+   content: '__';
+   position: absolute;
+   display: block;
+   margin: -8px -22px;
+   font-weight: 700;
+   color: var(--main-color);
+} 
+.section-content pre {
+    background-color: var(--pink-color);
+}
+.section-content span {
+    font-size: 14px;
+    font-weight: 700;
+}
+.section-content a {
+    text-decoration: none;
+    color: var(--font-color);
+    transition: 0.5s;
+}
+.section-content a:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    margin-top: 100px;
+    background-color: var(--main-color);
+}
+.github-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url("assets/img/github.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(2.5);
+}
+.github-icon:hover {
+    filter: none;
+}
+.copyright {
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--font-second-color);
+}
+.rss-logo {
+    width: 120px;
+    height: 50px;
+    background-image: url("assets/img/rss.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(2.5);
+}
+.rss-logo:hover {
+    filter: none;
+}
+@media (max-width: 805px) {
+  .section {
+    width: 100%;
+  }
+  .photo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list {
+    justify-content: space-between;
+  }
+  .nav-link {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }

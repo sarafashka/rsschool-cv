@@ -181,6 +181,7 @@ html {
   }
   .section {
     width: 100%;
+    padding-left: 10px;
   }
   .photo-container {
     flex-direction: column;
@@ -212,5 +213,8 @@ html {
     .nav-list {
         flex-direction: column;
         align-items: center;
-}
+    }
+    .section-content pre {
+        font-size: 14px;
+    }
 }

@@ -7,127 +7,178 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="icon" href="assets/favicon.ico">
+    <link rel="icon" href="./assets/favicon.ico">
 </head>
 <body>
     <header class="header">
-        <div class="header__container">
+        <div class="header__container container">
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#about" class="nav__item-link">About me</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__item-link">Skills</a></li>
                     <li class="nav__item"><a href="#education" class="nav__item-link">Education</a></li>
                     <li class="nav__item"><a href="#code-example" class="nav__item-link">Code</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__item-link">Projects</a></li>    
+                    <li class="nav__item"><a href="#projects" class="nav__item-link">Projects</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__item-link">Contacts</a></li>     
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
-        <div class="main__container">
+        <div class="main__container container">
             <section class="section" id="about">
                 <div class="about">
                     <div class="about__column">
                         <h1 class="about__title">Hello!<br>I'm Natalya Stepanova</h1>
-                        <p class="about__text ">I'm Junior Frontend developer, who wants to gain new knowledge and experience.<br>I've been working as IT project manager for the last 10 years.<br> 
-                        Now I'm studying in RSSchool.</p>
-                        <button class="about__contact button">Contact me</button>
+                        <p class="about__text ">I'm <span>Junior Frontend developer</span>, who wants to gain new knowledge and experience. I've been working as IT project manager for the last 10 years.
+                        Now I'm studying at RSSchool on the JS Course.</p>
+                        <button class="about__contact button"><a href="#contacts">Contact me</a></button>
                     </div> 
-                    <div class="about__column">
-                        <div class="about__photo"><img src="assets/img/img6.png" alt="My photo" class="round-photo"></div>
+                     <div class="about__column">
+                        <div class="about__photo"></div>
                     </div>
-                </section>                  
-                <section class="skills" id="skills">
-                    <div class="skills__content">
-                       <ul class="skills__list">
-                            <li class="skills__item">HTML5</li>
-                            <li class="skills__item">CSS3</li>
-                            <li class="skills__item">Saas</li>
-                            <li class="skills__item">JS</li>
-                            <li class="skills__item">Git/GitHub</li>
+                </div>
+            </section>                  
+            <section class="skills" id="skills">
+                     <div class="skills__content"> 
+                        <ul class="skills__list">
+                            <li class="skills__item skills__item_html"></li>
+                            <li class="skills__item skills__item_css"></li>
+                            <li class="skills__item skills__item_saas"></li>
+                            <li class="skills__item skills__item_js"></li>
                         </ul> 
-                    </div>
-                </section>
+                    </div> 
+                 </section>    
                 <section class="section" id="education">
-                    <h2 class="section__title">Education</h2>
                     <div class="education">
-                        <div class="education__text-about"></div>
+                        <h2 class="education__title section-title">Education</h2>
                         <div class="education__content">
-                            <div class="education__block"><a class="education__link" href="#university">University</a></div>
-                            <div class="education__block"><a class="education__link" href="#courses">Courses</a></div>
-                            <div class="education__block"><a class="education__link" href="#languages">Languages</a></div>
+                            <div class="education-block">
+                                <div class="education-block__container">
+                                    <svg class="education-block__icon">
+                                        <use xlink:href="./assets/svg/education/education-sprite.svg#university"></use>
+                                    </svg>
+                                </div>
+                                <div class="education-block__title">University</div>
+                                <div class="education-block__text">Manager of innovation technologies,<br> Russian State University for Innovation Technologies and Business, 2009</div>
+                            </div>
+                            <div class="education-block">
+                                <div class="education-block__container">
+                                    <svg class="education-block__icon">
+                                        <use xlink:href="./assets/svg/education/education-sprite.svg#courses"></use>
+                                    </svg>
+                                </div>
+                                <div class="education-block__title">Courses</div>
+                                <div class="education-block__text">
+                                    <ul class="education-block__text-list">
+                                        <li class="education-block__text-item">JS Stage0, RSSchool 2022</li>
+                                        <li class="education-block__text-item">Frontend and Web-design, Plekhanov Russian University of Economics, 2021</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="education-block">
+                                <div class="education-block__container">
+                                    <svg class="education-block__icon">
+                                        <use xlink:href="./assets/svg/education/education-sprite.svg#language"></use>
+                                    </svg>
+                                </div>
+                                <div class="education-block__title">Languages </div> 
+                                <div class="education-block__text">
+                                    <ul class="education-block__text-list">  
+                                        <li class="education-block__text-item">Russian - Native</li>
+                                        <li class="education-block__text-item">English - A2 (Pre-Intermediate)</li>
+                                    </ul>
+                                </div> 
+                            </div>
                         </div>
-                        <div class="education__text" id="university">Manager of innovation technologies, Russian State University for Innovation Technologies and Business 2009</div>
-                        <div class="education__text" id="courses">
-                            <ul class="education__text-list">
-                                <li class="education__text-item">JS Stage0, RSSchool 2022</li>
-                                <li class="education__text-item">Frontend and Web-design, Plekhanov Russian University of Economics, 2021</li>
-                            </ul>
-                        </div>
-                        <div class="education__text" id="languages">
-                            <ul class="education__text-list">  
-                                <li class="education__text-item">Russian - Native</li>
-                                <li class="education__text-item">English - A2 (Pre-Intermediate)</li>
-                            </ul>
-                        </div> 
-                    </div>
+                    </div> 
                 </section>
 
+                <section class="section" id="code-example">
+                    <div class="code">
+                        <details>
+                            <summary><h2 class="code__title section-title">Code example</h2></summary>
+                            <p class="code__content">
+                                <div class="code__description">RGB To Hex Conversion</div>
+                                <div class="code__example">
+                                    <pre class="hljs" style="display: block; overflow-x: auto; background: rgb(19, 21, 19); color: rgb(140, 166, 140); padding: 0.5em;"><span class="hljs-function"><span class="hljs-keyword" style="color: rgb(173, 43, 238);">function</span> <span class="hljs-title" style="color: rgb(61, 98, 245);">rgb</span>(<span class="hljs-params" style="color: rgb(135, 113, 29);">r, g, b</span>)</span>{
+                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> rgbArr = [r, g, b].map(item =&gt; {
+                                            <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (<span class="hljs-built_in" style="color: rgb(135, 113, 29);">Number</span>(item) &lt; <span class="hljs-number" style="color: rgb(135, 113, 29);">0</span>) {
+                                                item = <span class="hljs-number" style="color: rgb(135, 113, 29);">0</span>;
+                                            } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">else</span> <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (<span class="hljs-built_in" style="color: rgb(135, 113, 29);">Number</span>(item) &gt; <span class="hljs-number" style="color: rgb(135, 113, 29);">255</span>) {
+                                                item = <span class="hljs-number" style="color: rgb(135, 113, 29);">255</span>;
+                                            } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> item;
+                                        });
+                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> hex = rgbArr.map(item =&gt; item.toString(<span class="hljs-number" style="color: rgb(135, 113, 29);">16</span>));
+                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> hexFull = hex.map(item =&gt; {
+                                            <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (item.length === <span class="hljs-number" style="color: rgb(135, 113, 29);">1</span>) {
+                                                item = <span class="hljs-string" style="color: rgb(41, 163, 41);">`0<span class="hljs-subst">${item}</span>`</span>;
+                                            } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> item;
+                                        });
+                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> hexFull.join(<span class="hljs-string" style="color: rgb(41, 163, 41);">''</span>).toUpperCase();
+                                    };</pre> 
+                                </div>                            
+                            </p>
+                        </details>
+                    </div>
+                </section> 
+
                 <section class="section" id="projects">
-                   <h2 class="section__title">Projects</h2>
                     <div class="projects">
+                        <h2 class="projects__title section-title">Projects</h2>
                         <div class="projects__content">
-                            <div class="projects__slider">
-                                <ul class="projects__list">
-                                    <li class="project-item">
-                                        <div class="project-item__img"></div>
-                                        <div class="project-item__title"></div>
-                                        <div class="project-item__text"></div>
-                                    </li>
-                                </ul>
+                            <div class="projects__list">
+                                <div class="projects-item">
+                                    <div class="projects-item__slide">
+                                        <img class="projects-item__img" src="./assets/img/projects/1.jpg" alt="">
+                                        <div class="projects-item__content">
+                                            <div class="projects-item__title">Landing Page</div>
+                                            <p class="projects-item__text">Landing page of the photographer's portfolio, adaptive and interactive. The project supports changing images in the portfolio section, translating the page into two languages, the ability to switch light and dark themes</p>
+                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/portfolio">View Project</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="projects-item__slide">
+                                        <img class="projects-item__img" src="./assets/img/projects/2.jpg" alt="">
+                                        <div class="projects-item__content">
+                                            <div class="projects-item__title">Quotes Book</div>
+                                            <p class="projects-item__text">Landing page of the photographer's portfolio, adaptive and interactive. The project supports changing images in the portfolio section, translating the page into two languages, the ability to switch light and dark themes</p>
+                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-jokes/">View Project</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="projects-item__slide">
+                                        <img class="projects-item__img" src="./assets/img/projects/3.jpg" alt="">
+                                        <div class="projects-item__content">
+                                            <div class="projects-item__title">Browser Game</div>
+                                            <p class="projects-item__text">Landing page of the photographer's portfolio, adaptive and interactive. The project supports changing images in the portfolio section, translating the page into two languages, the ability to switch light and dark themes</p>
+                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-game/">View Project</a>
+                                        </div>
+                                    </div>                                    
+                                </div>   
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="section" id="code-example">
-                    <h2 class="section__title">Code example</h2>
-                    <div class="code">
-                        <div class="code__content">
-                            <div class="code__description"></div>
-                            <div class="code__example">
-                                <pre><code>function evenNumbers (array) {
-                                    for (i=0; i &lt; array.length; i++) {
-                                        if (array[i] % 2 == 0) {
-                                            evenArray.push (array[i]);
-                                        }
-                                    }
-                                    return evenArray;
-                                }</code></pre>   
-                            </div>                            
-                        </div>
-                    </div>
-                </section> 
-                <section class="contact" id="contacts">
-                <h2 class="contact__title">Let's connect</h2>
-                <div class="contact__content">
-                    <ul class="contact__list"> 
-                        <li class="contact__item">Location: Moscow, Russia</li>
-                        <li class="contact__item contact__item_discord"> https://discordapp.com/users/Nataly#1693/</li>
-                        <li class="contact__item contact__item_email">E-mail: <a href="mailto:sstepanova.nv@gmail.com"> sstepanova.nv@gmail.com</a>/</lш>
-                        <li class="contact__item contact__item_telegram">@Nataly_St</li>
-                        <li class="contact__item contact__item_github">sarafashka</li>
-                    </ul>
-                </div>
-            </section>
+                
+                <section class="contacts" id="contacts">
+                       <h2 class="contacts__title">Let's connect</h2>
+                        <ul class="contacts__list"> 
+                            <li class="contacts__item"><a href="https://discordapp.com/users/Nataly#1693/" target="_blank"><div class="contacts__link contacts__link_discord"></div></a> </li>
+                            <li class="contacts__item"><a href="mailto:sstepanova.nv@gmail.com" target="_blank"><div class="contacts__link contacts__link_email"></div></a></li>
+                            <li class="contacts__item"><a href="https://t.me/Nataly_St" target="_blank"><div class="contacts__link contacts__link_telegram"></div></a></li>
+                            <li class="contacts__item"><a href="https://github.com/sarafashka" target="_blank"><div class="contacts__link contacts__link_github"></div></a></li>
+                        </ul>
+                </section>
         </div>
     </main>
     <footer class="footer">
-        <div class="footer__container">
-            <a class="footer__icon footer__icon_github" href="https://github.com/sarafashka" target="_blank"></a>
-            <div class="footer__copyright">2022<br>Natalya Stepanova </div>
-            <a class="footer__icon footer__icon_rss" href="https://rs.school/js/" target="_blank"></a>
+        <div class="footer__container container">
+            <div class="footer__copyright">&copy 2022<a href="https://github.com/sarafashka" target="_blank">sarafashka</a>Moscow, Russia</div>
+            <div><a href="https://rs.school/js/" target="_blank"><div class="footer__rss"></div></a></div>
+            
         </div>
     </footer>
+
 </body>
 </html>

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/bc6922700b.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
     <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="header">
@@ -28,26 +27,26 @@
             <section class="section" id="about">
                 <div class="about">
                     <div class="about__column">
-                        <h1 class="about__title">Hello!<br>I'm Natalya Stepanova</h1>
+                        <h1 class="about__title">Hello! <p>I'm Natalya Stepanova</p></h1>
                         <p class="about__text ">I'm <span>Junior Frontend developer</span>, who wants to gain new knowledge and experience. I've been working as IT project manager for the last 10 years.
                         Now I'm studying at RSSchool on the JS Course.</p>
-                        <button class="about__contact button"><a href="#contacts">Contact me</a></button>
+                        <div class="about__contact button"><a href="#contacts">Contact me</a></div>
                     </div> 
                      <div class="about__column">
                         <div class="about__photo"></div>
                     </div>
                 </div>
             </section>                  
-            <section class="skills" id="skills">
-                     <div class="skills__content"> 
-                        <ul class="skills__list">
-                            <li class="skills__item skills__item_html"></li>
-                            <li class="skills__item skills__item_css"></li>
-                            <li class="skills__item skills__item_saas"></li>
-                            <li class="skills__item skills__item_js"></li>
-                        </ul> 
-                    </div> 
-                 </section>    
+            <div class="skills" id="skills">
+                <div class="skills__content"> 
+                    <ul class="skills__list">
+                        <li class="skills__item skills__item_html"></li>
+                        <li class="skills__item skills__item_css"></li>
+                        <li class="skills__item skills__item_saas"></li>
+                        <li class="skills__item skills__item_js"></li>
+                    </ul> 
+                </div> 
+            </div>    
                 <section class="section" id="education">
                     <div class="education">
                         <h2 class="education__title section-title">Education</h2>
@@ -96,28 +95,26 @@
                 <section class="section" id="code-example">
                     <div class="code">
                         <details>
-                            <summary><h2 class="code__title section-title">Code example</h2></summary>
-                            <p class="code__content">
+                            <summary><h2 class="code__title">Code example</h2></summary>
                                 <div class="code__description">RGB To Hex Conversion</div>
                                 <div class="code__example">
-                                    <pre class="hljs" style="display: block; overflow-x: auto; background: rgb(19, 21, 19); color: rgb(140, 166, 140); padding: 0.5em;"><span class="hljs-function"><span class="hljs-keyword" style="color: rgb(173, 43, 238);">function</span> <span class="hljs-title" style="color: rgb(61, 98, 245);">rgb</span>(<span class="hljs-params" style="color: rgb(135, 113, 29);">r, g, b</span>)</span>{
-                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> rgbArr = [r, g, b].map(item =&gt; {
-                                            <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (<span class="hljs-built_in" style="color: rgb(135, 113, 29);">Number</span>(item) &lt; <span class="hljs-number" style="color: rgb(135, 113, 29);">0</span>) {
-                                                item = <span class="hljs-number" style="color: rgb(135, 113, 29);">0</span>;
-                                            } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">else</span> <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (<span class="hljs-built_in" style="color: rgb(135, 113, 29);">Number</span>(item) &gt; <span class="hljs-number" style="color: rgb(135, 113, 29);">255</span>) {
-                                                item = <span class="hljs-number" style="color: rgb(135, 113, 29);">255</span>;
-                                            } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> item;
-                                        });
-                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> hex = rgbArr.map(item =&gt; item.toString(<span class="hljs-number" style="color: rgb(135, 113, 29);">16</span>));
-                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> hexFull = hex.map(item =&gt; {
-                                            <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (item.length === <span class="hljs-number" style="color: rgb(135, 113, 29);">1</span>) {
-                                                item = <span class="hljs-string" style="color: rgb(41, 163, 41);">`0<span class="hljs-subst">${item}</span>`</span>;
-                                            } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> item;
-                                        });
-                                        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> hexFull.join(<span class="hljs-string" style="color: rgb(41, 163, 41);">''</span>).toUpperCase();
-                                    };</pre> 
+                                   <pre class="hljs" style="display: block; overflow-x: auto; background: rgb(19, 21, 19); color: rgb(140, 166, 140); padding: 0.5em;"><span class="hljs-function"><span class="hljs-keyword" style="color: rgb(173, 43, 238);">function</span> <span class="hljs-title" style="color: rgb(61, 98, 245);">rgb</span>(<span class="hljs-params" style="color: rgb(135, 113, 29);">r, g, b</span>)</span>{
+    <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> rgbArr = [r, g, b].map(item =&gt; {
+        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (<span class="hljs-built_in" style="color: rgb(135, 113, 29);">Number</span>(item) &lt; <span class="hljs-number" style="color: rgb(135, 113, 29);">0</span>) {
+            item = <span class="hljs-number" style="color: rgb(135, 113, 29);">0</span>;
+        } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">else</span> <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (<span class="hljs-built_in" style="color: rgb(135, 113, 29);">Number</span>(item) &gt; <span class="hljs-number" style="color: rgb(135, 113, 29);">255</span>) {
+            item = <span class="hljs-number" style="color: rgb(135, 113, 29);">255</span>;
+        } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> item;
+    });
+    <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> hex = rgbArr.map(item =&gt; item.toString(<span class="hljs-number" style="color: rgb(135, 113, 29);">16</span>));
+    <span class="hljs-keyword" style="color: rgb(173, 43, 238);">const</span> hexFull = hex.map(item =&gt; {
+        <span class="hljs-keyword" style="color: rgb(173, 43, 238);">if</span> (item.length === <span class="hljs-number" style="color: rgb(135, 113, 29);">1</span>) {
+            item = <span class="hljs-string" style="color: rgb(41, 163, 41);">`0<span class="hljs-subst">${item}</span>`</span>;
+        } <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> item;
+    });
+    <span class="hljs-keyword" style="color: rgb(173, 43, 238);">return</span> hexFull.join(<span class="hljs-string" style="color: rgb(41, 163, 41);">''</span>).toUpperCase();
+};</pre>
                                 </div>                            
-                            </p>
                         </details>
                     </div>
                 </section> 
@@ -129,29 +126,35 @@
                             <div class="projects__list">
                                 <div class="projects-item">
                                     <div class="projects-item__slide">
-                                        <img class="projects-item__img" src="./assets/img/projects/1.jpg" alt="">
+                                        <a class="projects-item__img" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/portfolio" target="_blank">
+                                            <img class="projects-item__img" src="./assets/img/projects/1.jpg" alt="">
+                                        </a>
                                         <div class="projects-item__content">
                                             <div class="projects-item__title">Landing Page</div>
                                             <p class="projects-item__text">Landing page of the photographer's portfolio, adaptive and interactive. The project supports changing images in the portfolio section, translating the page into two languages, the ability to switch light and dark themes</p>
-                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/portfolio">View Project</a>
+                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/portfolio" target="_blank">View Project</a>
                                         </div>
                                     </div>
 
                                     <div class="projects-item__slide">
-                                        <img class="projects-item__img" src="./assets/img/projects/2.jpg" alt="">
+                                        <a class="projects-item__img" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-jokes/" target="_blank">
+                                            <img class="projects-item__img" src="./assets/img/projects/2.jpg" alt="">
+                                        </a>
                                         <div class="projects-item__content">
-                                            <div class="projects-item__title">Quotes Book</div>
-                                            <p class="projects-item__text">Landing page of the photographer's portfolio, adaptive and interactive. The project supports changing images in the portfolio section, translating the page into two languages, the ability to switch light and dark themes</p>
-                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-jokes/">View Project</a>
+                                            <div class="projects-item__title">Quotes Generator</div>
+                                            <p class="projects-item__text">The website displays a random quote on every button click utilizing API links</p>
+                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-jokes/" target="_blank">View Project</a>
                                         </div>
                                     </div>
 
                                     <div class="projects-item__slide">
-                                        <img class="projects-item__img" src="./assets/img/projects/3.jpg" alt="">
+                                        <a class="projects-item__img" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-game/" target="_blank">
+                                            <img class="projects-item__img" src="./assets/img/projects/3.jpg" alt="">
+                                    </a>
                                         <div class="projects-item__content">
                                             <div class="projects-item__title">Browser Game</div>
-                                            <p class="projects-item__text">Landing page of the photographer's portfolio, adaptive and interactive. The project supports changing images in the portfolio section, translating the page into two languages, the ability to switch light and dark themes</p>
-                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-game/">View Project</a>
+                                            <p class="projects-item__text">Simple 2D web game using JavaScript and rendered on HTML5 &lt;canvas&gt;</p>
+                                            <a class="projects-item__link" href="https://rolling-scopes-school.github.io/sarafashka-JSFEPRESCHOOL/js30/random-game/" target="_blank">View Project</a>
                                         </div>
                                     </div>                                    
                                 </div>   
@@ -174,7 +177,7 @@
     </main>
     <footer class="footer">
         <div class="footer__container container">
-            <div class="footer__copyright">&copy 2022<a href="https://github.com/sarafashka" target="_blank">sarafashka</a>Moscow, Russia</div>
+            <div class="footer__copyright">&copy; 2022<a href="https://github.com/sarafashka" target="_blank">sarafashka</a>Tallinn, Estonia</div>
             <div><a href="https://rs.school/js/" target="_blank"><div class="footer__rss"></div></a></div>
             
         </div>

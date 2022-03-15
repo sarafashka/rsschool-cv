@@ -25,7 +25,7 @@ $bg-light: rgba(34, 42, 54, 0.95);
 $white: #ffffff;
 $black: #000000;
 
-$page-padding: 70px;
+$page-padding: 4vw;
 
 $width-max: 1440px;
 
@@ -74,7 +74,7 @@ body {
     gap: 10px;
     list-style: none;
     .nav__item {
-        width: 90px;
+        width: 100px;
         text-align: center;
         text-decoration: none;  
         z-index: 10;
@@ -136,9 +136,11 @@ body {
         @include poppins(400, 20px, 24px,);
         color: $white;
     }
-    //&:hover {
-    //    background-color: $white;
-   // }
+    &:hover {
+        & a {
+            color: $black;
+        }
+   }
 }
 .about__photo {
     width: 50vw;
@@ -293,7 +295,6 @@ body {
             display: flex;
             flex-direction: column;
             gap: 50px;
-          
 
             .projects-item__title {
                 @include poppins (400, 40px , 64px);
@@ -391,6 +392,7 @@ summary {
     max-width: $width-max;
     display: flex;
     justify-content: space-between;
+    padding-left: $page-padding;
 }
 .footer__copyright {
     display: flex;
@@ -444,15 +446,16 @@ summary {
 }
 @media (max-width: 768px) {
     $page-padding: 20px;
+    
     .about {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-
     }
     .about__column {
         width: 100%;
         justify-content: center;
+        align-items: center;
         gap: 10px;
     }
     .about__title {
@@ -460,9 +463,77 @@ summary {
         align-items: center;
   
     }
-  
     .about__photo {
         width: 60vw;
         height: 40vh;
     }
+    details {
+        width: 95%;
+        @include poppins(400, 15px, 22px)
+    }
+    .projects-item {
+        align-items: center;
+        .projects-item__slide {
+            display: flex;
+            flex-direction: column;
+            &:nth-child(even) {
+                .projects-item__img {
+                    order: 0;
+                }
+            }
+            .projects-item__img {
+                width: 80vw;
+              }
+            .projects-item__content {
+                width: 80vw;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+    @media (max-width: 480px) {
+        .nav__list {
+            gap: 5px;
+            .nav__item {
+                @include poppins(500, 15px, 22px)
+            }
+        }
+        .about {
+            height: 85vh; 
+        }
+        .about__photo {
+            width: 85vw;
+        }
+        .about__text {
+            @include poppins(400, 18px ,32px);
+        }
+        .skills {
+            height: 15vh;
+        }
+        .skills__item {
+            width: 75px;
+            height: 75px;
+        }
+        .section-title {
+            @include poppins(700, 35px, 50px);
+        }
+        summary {
+            &::after {  
+                transform: translate(10px, 16px);
+            }
+            .code__title {
+                @include poppins(700, 35px, 50px);
+            }
+        }
+        .contacts__title {
+            @include poppins(700, 70px, 100px)
+        }
+        .contacts__link {
+            width: 35px;
+            height: 35px; 
+        }
+        .footer__copyright {
+            flex-wrap: wrap;
+        }
 }

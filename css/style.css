@@ -29,10 +29,6 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Poppins';
   font-weight: 500;
@@ -56,29 +52,28 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
+  gap: 45px;
   list-style: none;
 }
 
 .nav__list .nav__item {
-  width: 90px;
-  text-align: center;
   text-decoration: none;
-  z-index: 10;
-}
-
-.nav__list .nav__item:hover {
-  background-color: #676CDB;
+  z-index: 1;
 }
 
 .nav__list .nav__item .nav__item-link {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
+.nav__list .nav__item .nav__item-link:hover {
+  text-decoration: underline;
+}
+
 .section {
+  padding: 0px 70px;
   background-color: rgba(34, 42, 54, 0.95);
 }
 
@@ -119,7 +114,6 @@ body {
   font-weight: 700;
   font-size: 90px;
   line-height: 98px;
-  padding-left: 70px;
 }
 
 .about__text {
@@ -128,7 +122,6 @@ body {
   font-size: 20px;
   line-height: 36px;
   color: rgba(255, 255, 255, 0.5);
-  padding-left: 70px;
 }
 
 .about__text span {
@@ -138,17 +131,14 @@ body {
 .button {
   width: 203px;
   height: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 70px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
   background-color: #676CDB;
+  border: none;
+  outline: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -156,22 +146,20 @@ body {
 
 .button a {
   text-decoration: none;
-  font-family: 'Poppins';
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ffffff;
+  color: white;
+}
+
+.button:hover {
+  background-color: #C4C4C4;
 }
 
 .about__photo {
-  width: 50vw;
+  width: 720px;
   height: 80vh;
   background-image: url(./assets/img/img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: center;
   opacity: 0.7;
-  z-index: 1;
 }
 
 .skills {
@@ -179,20 +167,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #000000;
 }
 
-.skills .skills__content {
-  width: 1440px;
+.skills__content {
+  width: 100%;
 }
 
-.skills .skills__content .skills__list {
+.skills__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +225,6 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 72px;
-  padding-left: 70px;
 }
 
 .education {
@@ -271,8 +255,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -391,8 +373,8 @@ body {
 }
 
 .projects-item .projects-item__slide .projects-item__img {
-  -webkit-filter: contrast(0.85) opacity(0.9);
-          filter: contrast(0.85) opacity(0.9);
+  -webkit-filter: contrast(0.85) opacity(0.7);
+          filter: contrast(0.85) opacity(0.7);
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -435,19 +417,16 @@ body {
 }
 
 .code {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
-}
-
-details {
-  width: 80%;
-  padding-left: 70px;
 }
 
 summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
   list-style: none;
   cursor: pointer;
   -webkit-transition: 0.5s;
@@ -478,13 +457,6 @@ summary:hover {
 summary:hover:after {
   -webkit-filter: none;
           filter: none;
-}
-
-summary .code__title {
-  font-family: 'Poppins';
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 72px;
 }
 
 .contacts {
@@ -606,69 +578,5 @@ summary .code__title {
 .footer__rss:hover {
   -webkit-filter: none;
           filter: none;
-}
-
-@media (max-width: 960px) {
-  .about__title {
-    font-family: 'Playfair_Display';
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 72px;
-  }
-  .education {
-    height: auto;
-  }
-  .education__content {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .projects-item__content {
-    gap: 20px;
-  }
-  .projects-item__content .projects-item__title {
-    font-family: 'Poppins';
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 42px;
-  }
-  .projects-item__img {
-    width: 360px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .about__column {
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 10px;
-  }
-  .about__title {
-    font-family: 'Playfair_Display';
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 42px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .about__photo {
-    width: 60vw;
-    height: 40vh;
-  }
 }
 /*# sourceMappingURL=style.css.map */

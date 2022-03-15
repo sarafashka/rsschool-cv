@@ -25,7 +25,7 @@ $bg-light: rgba(34, 42, 54, 0.95);
 $white: #ffffff;
 $black: #000000;
 
-$page-padding: 70px;
+$page-padding: 0px 70px;
 
 $width-max: 1440px;
 
@@ -48,9 +48,6 @@ $width-max: 1440px;
     padding: 0;
     margin: 0;
 }
-html {
-    scroll-behavior: smooth; 
-  }
 body {
     font-family: 'Poppins';
     font-weight: 500;
@@ -58,37 +55,33 @@ body {
     line-height: 36px;
     color: $white;
 }
-
 .container {
   margin: 0px auto;
- // overflow-x: hidden;
 }
 
 .header__container {
     height: 5vh;
-
 }
 .nav__list {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 45px;
     list-style: none;
     .nav__item {
-        width: 90px;
-        text-align: center;
         text-decoration: none;  
-        z-index: 10;
-        &:hover {
-            background-color: $purple;
-        }
+        z-index: 1;
          .nav__item-link {
-             color: $white;
+             color: white;
              text-decoration: none;
              transition: 0.3s;
+             &:hover {
+                text-decoration: underline;
+             }
         }
     }
 }
 .section {
+    padding: $page-padding;
     background-color: $bg-light;
     &:nth-child(even){
         background-color: $bg;
@@ -111,12 +104,10 @@ body {
 }
 .about__title {
     @include playfair(700, 90px ,98px);
-    padding-left: $page-padding;
 }
 .about__text {
     @include poppins(400, 20px ,36px);
     color: rgba(255, 255, 255, 0.50);
-    padding-left: $page-padding;
     span {
         color: rgba(255, 255, 255, 1);
     }  
@@ -124,47 +115,43 @@ body {
 .button {
     width: 203px;
     height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: $page-padding;
+    @include poppins(400, 20px, 24px,);
+    color: $white;
     background-color: $purple;
+    border: none;
+    outline: none;
     cursor: pointer;
     transition: 0.3s;
     & a {
         text-decoration: none;
-        @include poppins(400, 20px, 24px,);
-        color: $white;
+        color: white;
     }
-    //&:hover {
-    //    background-color: $white;
-   // }
+    &:hover {
+        background-color: $grey;
+    }
 }
 .about__photo {
-    width: 50vw;
+    width: 720px;
     height: 80vh;
     background-image: url(./assets/img/img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
     opacity: 0.7;
-    z-index: 1;
 }
 
 .skills {
     height: 20vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: $black;
-    .skills__content {
-        width: $width-max;
-        .skills__list {
-            display: flex;
-            justify-content: space-evenly;
-            list-style: none;
-        }
-    }
+}
+.skills__content {
+    width: 100%;
+}
+.skills__list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 }
 .skills__item {
     width: 100px;
@@ -192,8 +179,7 @@ body {
 }
 
 .section-title {
-    @include poppins(700, 40px, 72px);
-    padding-left: $page-padding;
+    @include poppins(700, 40px, 72px)
 }
 .education {
     max-width: $width-max;
@@ -210,7 +196,6 @@ body {
 .education__content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
 }
@@ -281,7 +266,7 @@ body {
         justify-content: space-around;
 
         .projects-item__img {
-            filter:  contrast(0.85) opacity(0.9);
+            filter:  contrast(0.85) opacity(0.7);
             cursor: pointer;
             transition: 0.3s;
             &:hover {
@@ -309,15 +294,12 @@ body {
     }
 }
 .code {
-    max-width: $width-max;
+    width: $width-max;
     margin: 0 auto;
-}
-details {
-    width: 80%;
-    padding-left: $page-padding;
 }
 summary {
     display: flex;
+    align-self: center;
     list-style: none;
     cursor: pointer;
     transition: 0.5s;
@@ -339,9 +321,6 @@ summary {
     } 
     &:hover:after {
         filter: none;
-    }
-    .code__title {
-        @include poppins(700, 40px, 72px);
     }
 }
 
@@ -421,48 +400,3 @@ summary {
     }
 }
 
-@media (max-width: 960px) {
-
-    .about__title {
-        @include playfair(700, 60px ,72px);
-    }
-    .education {
-        height: auto;
-    }
-    .education__content {
-        justify-content: center;
-    }
-    .projects-item__content {
-        gap: 20px;
-        .projects-item__title {
-        @include poppins (400, 36px , 42px);
-        }   
-     }
-    .projects-item__img {
-      width: 360px;
-    }
-}
-@media (max-width: 768px) {
-    $page-padding: 20px;
-    .about {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-
-    }
-    .about__column {
-        width: 100%;
-        justify-content: center;
-        gap: 10px;
-    }
-    .about__title {
-        @include playfair(700, 30px ,42px);
-        align-items: center;
-  
-    }
-  
-    .about__photo {
-        width: 60vw;
-        height: 40vh;
-    }
-}
